@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head><title>Shibus Test Cron</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<style>
+  .hour { width:25px;  }  
+  .minute { width:25px;  }
+  .day { width:25px;  }  
+</style>
+
+
+</head>
+<body>
+
+<div id="cronselector"> 
+<table>
+	<tr>
+		<td> At <input id="hour" type="text" class="hour"/> :<input id="minute" type="text" class="minute"/> </td>
+		<td> </td>
+	</tr>
+	
+	
+	<tr>
+		<td><input type="radio" name="seloptions" id="weeklyrecurring"/> </td>
+		<td>   
+			Mon<input type="checkbox" name="weekday" value="Mon"/>
+			Tue<input type="checkbox" name="weekday" value="Tue"/>
+			Wed<input type="checkbox" name="weekday" value="Wed"/>
+			Thu<input type="checkbox" name="weekday" value="Thu"/>
+			Fri<input type="checkbox" name="weekday" value="Fri"/>
+			Sat<input type="checkbox" name="weekday" value="Sat"/>
+			Sun<input type="checkbox" name="weekday" value="Sun"/>
+		</td>  
+	</tr>
+	
+	<tr>
+		<td><input type="radio" name="seloptions" id="monthlyonce"/></td>
+		<td><input id="dayofmonth"type="text" class="day"/> Day of Every Month</td>
+	</tr>
+	
+	<tr>
+		<td> <input type="radio" name="seloptions" id="monthlyrecurring"/>  </td>
+		<td>
+			 <select id="once-month"> 
+				<option value="1">First</option> 
+				<option value="2">Second</option> 
+				<option value="2">Third</option> 
+				<option value="4">Fourth</option> 
+			 </select>
+			 
+			 <select id="once-weekday">
+				<option value="Mon">Monday</option> 
+				<option value="Tue">Tuesday</option> 
+				<option value="Wed">Wednesday</option> 
+				<option value="Thu">Thursday</option> 
+				<option value="Fri">Friday</option> 
+				<option value="Sat">Saturday</option> 
+				<option value="Sun">Sunday</option> 
+			 </select>
+			 of Every Month
+		</td> 
+	</tr>
+	
+	<tr>
+		<td> Every <input  id="minuterecurring" type="text" class="day"/> Minutes </td>
+		<td></td>
+	</tr>
+	
+	<tr>
+		<td></td>
+		<td> <button id="create_cron_expr"> Create </button>  </td>
+	</tr>
+</table>
+</div>
+<div id="result" style="background-color:red;"> </div>
+<script src="cron.js" type="text/javascript"> </script>
+</body>
+
+</html>
